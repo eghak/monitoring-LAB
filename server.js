@@ -30,7 +30,8 @@ rollbar.log("Hello world!");
 
 app.get(`/api/lab`, (req, res) => {
   try {
-    car();
+    // car();
+    console.log(`car`)
   } catch (error) {
     rollbar.error(`error`);
   }
