@@ -8,7 +8,7 @@ const Rollbar = require(`rollbar`);
 //   captureUncaught: true,
 //   captureUnhandledRejections: true,
 // });
-var Rollbar = require("rollbar");
+// var Rollbar = require("rollbar");
 var rollbar = new Rollbar({
   accessToken: "d2ae372101734a8c9f8309fde31e4f89",
   captureUncaught: true,
