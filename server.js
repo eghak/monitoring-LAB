@@ -28,6 +28,10 @@ app.get(`/`, (req, res) => {
 // record a generic message and send it to Rollbar
 rollbar.log("Hello world!");
 
+const car => {
+    console.log(`4`)
+}
+
 app.get(`/api/lab`, (req, res) => {
   try {
     car();
