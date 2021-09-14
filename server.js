@@ -8,6 +8,8 @@ const path = require(`path`);
 //     captureUnhandledRejections: true,
 //   });
 
+const app = express()
+
 app.get(`/`, (req, res) => {
   res.sendFile(path.join(__dirname, `/public/index.html`));
 //   Rollbar.info(`HTML file served successfully!`)
