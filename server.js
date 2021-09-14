@@ -1,4 +1,4 @@
-const { cargo } = require("async");
+// const { cargo } = require("async");
 const express = require(`express`);
 const path = require(`path`);
 const Rollbar = require(`rollbar`);
@@ -16,7 +16,7 @@ app.get(`/`, (req, res) => {
   Rollbar.info(`HTML file served successfully!`);
 });
 
-app.get(`api/lab`, (req, res) => {
+app.get(`/api/lab`, (req, res) => {
   try {
     car();
   } catch (error) {
@@ -26,7 +26,7 @@ app.get(`api/lab`, (req, res) => {
 
 const port = process.env.PORT || 4005;
 
-// app.use(rollbar.errorHandler());
+app.use(rollbar.errorHandler());
 
 app.listen(port, () => {
   console.log(`Listening to ${port}`);
