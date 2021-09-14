@@ -56,6 +56,24 @@
           .catch((error) => {
             console.log(`error`);
           });
+
+          axios
+          .get(`/api/labtwo`)
+          .then((res) => {
+            console.log(res.data);
+          })
+          .catch((error) => {
+            console.log(`warning`);
+          });
+
+          axios
+          .get(`/api/labthree`)
+          .then((res) => {
+            console.log(res.data);
+          })
+          .catch((error) => {
+            console.log(`critical`);
+          });
     </script>
 </body>
 </html>

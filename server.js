@@ -30,12 +30,27 @@ rollbar.log("Hello world!");
 
 app.get(`/api/lab`, (req, res) => {
   try {
-    // car();
-    console.log(`car`)
+    car();
   } catch (error) {
     rollbar.error(`error`);
   }
 });
+
+app.get(`/api/labtwo`, (req, res) => {
+    try {
+      car();
+    } catch (error) {
+      rollbar.warning(`warning`);
+    }
+  });
+
+  app.get(`/api/labthree`, (req, res) => {
+    try {
+      car();
+    } catch (error) {
+      rollbar.critical(`critical`);
+    }
+  });
 
 const port = process.env.PORT || 4005;
 
