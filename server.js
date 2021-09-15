@@ -9,11 +9,11 @@ const Rollbar = require(`rollbar`);
 //   captureUnhandledRejections: true,
 // });
 // var Rollbar = require("rollbar");
-var rollbar = new Rollbar({
-  accessToken: "d2ae372101734a8c9f8309fde31e4f89",
-  captureUncaught: true,
-  captureUnhandledRejections: true,
-});
+// var rollbar = new Rollbar({
+//   accessToken: "d2ae372101734a8c9f8309fde31e4f89",
+//   captureUncaught: true,
+//   captureUnhandledRejections: true,
+// });
 
 const app = express();
 app.use(express.json());
@@ -28,9 +28,9 @@ app.get(`/`, (req, res) => {
 // record a generic message and send it to Rollbar
 rollbar.log("Hello world!");
 
-const car = () => {
-    console.log(`hi`)
-}
+// const car = () => {
+//     console.log(`hi`)
+// }
 
 app.get(`/api/lab`, (req, res) => {
   try {
